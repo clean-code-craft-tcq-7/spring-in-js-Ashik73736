@@ -11,6 +11,9 @@ describe('Statistics', () => {
     });
     it('reports NaN for empty input', () => {
         const computedStats = computeStatistics([]);
+    expect(Number.isNaN(computedStats.avg)).to.be.true;
+    expect(Number.isNaN(computedStats.max)).to.be.true;
+    expect(Number.isNaN(computedStats.min)).to.be.true;
         // All fields of computedStats (average, max, min) must be
         // NAN (not-a-number)
         // Design the expect statement here.
