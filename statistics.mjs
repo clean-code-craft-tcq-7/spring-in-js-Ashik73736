@@ -1,7 +1,7 @@
 
 export function computeStatistics(numbers){
     
-    if(!numbers){
+    if(!numbers || numbers.length === 0){
         return {"avg": NaN, "min": NaN, "max": NaN}
     }
 
