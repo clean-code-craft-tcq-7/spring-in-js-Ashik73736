@@ -5,10 +5,15 @@ export function computeStatistics(numbers){
         return {"avg": NaN, "min": NaN, "max": NaN}
     }
 
-    const avg = numbers.reduce((a, b) => a + b, 0) / numbers.length;
-    const minVal = Math.min(...numbers);
-    const maxVal = Math.max(...numbers);
+    const sum = numbers.reduce((a, b) => a + b, 0);
+    const avg = sum / numbers.length;
+    const min = Math.min(...numbers);
+    const max = Math.max(...numbers);
 
-    return { avg: avg, min: minVal, max: maxVal };
+    return {
+        avg,
+        min,
+        max
+    };
 
 }
